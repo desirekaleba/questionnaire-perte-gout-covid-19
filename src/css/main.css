@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&display=swap');
+
+* {
+    line-height: 1.6;
+    word-spacing: .18rem;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Baloo Bhaina 2', cursive;
+    overflow-x: hidden;
+}
+
+h1, h2 {
+    line-height: 1.3;
+    text-align: center;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 1rem auto;
+}
+
+.question {
+    margin-top: 1.5rem;
+}
+.question-title {
+    font-weight: bold;
+}
