@@ -41,37 +41,42 @@
         <h2>OUTIL DE DÉCLARATION D'ANOSMIE COVID-19</h2>
 
         <form action="">
-            <div class="question">
+            <div class="question question-1">
                 <label class="question-title" for="">1. Spécialité médicale du consultant:</label><br>
                 <input type="text">
             </div>
-            <div class="question">
+
+            <div class="question question-2">
                 <label class="question-title" for="">2. Âge du patient:</label>
                 <br>
                 <input type="number">
             </div>
-            <div class="question">
+
+            <div class="question question-3">
                 <label class="question-title" for="">3. Sexe du patient:</label><br>
-                <input type="radio" name="sexe" value="homme" />Homme
-                <input type="radio" name="sexe" value="femme" />Femme
+                <input id="homme" type="radio" name="sexe" value="homme" />Homme
+                <input id="femme" type="radio" name="sexe" value="femme" />Femme
             </div>
-            <div class="question">
+
+            <div class="question question-4">
                 <label class="question-title" for="">4. Localisation du patient au moment du diagnostic</label><br>
-                <input type="radio" name="localisation" id="" value="aupays">Au Pays
+                <input type="radio" name="localisation" id="" value="au pays">Au Pays
                 <input type="radio" name="localisation" id="" value="autre">Autre<br>
                 <label for="">Si autre, Veuillez préciser le pays</label><br>
                 <input type="text">
             </div>
-            <div class="question">
+
+            <div class="question question-5">
                 <label class="question-title" for="">5. La source de l'infection au COVID-19 est-elle identifiable?</label>
                 <br>
                 <input type="radio" name="source-identifiable" value="oui">Oui
                 <input type="radio" name="source-identifiable" value="non">Non<br>
                 <label for="">Si oui, combien de jours après le contact la perte de la perceotion des odeurs ou du gout
                     a t-elle été observée pour la première fois?</label><br>
-                <input type="text" name="" id="">
+                <input type="number" name="" id="">
             </div>
-            <div class="question">
+
+            <div class="question question-6">
                 <label class="question-title" for="">6. Veuillez énumérer tous les facteurs de risque d'infection au COVID-19
                     présents:</label><br>
                 <input type="checkbox" name="" id="" value="aucun">Aucun<br>
@@ -90,7 +95,8 @@
                 <label for="">si Autre, veuillez préciser les facteurs de risque</label><br>
                 <input type="text" name="" id="">
             </div>
-            <div class="question">
+
+            <div class="question question-7">
                 <label class="question-title" for="">7. Autres facteurs de risque / comorbidités:</label><br>
                 <input type="checkbox" name="" id="" value="Aucun">Aucun<br>
                 <input type="checkbox" name="" id="" value="Fumeur">Fumeur<br>
@@ -104,7 +110,8 @@
                 <label for="">Si «Autre», veuillez préciser les facteurs de risque / comorbidités</label><br>
                 <input type="text">
             </div>
-            <div class="question">
+
+            <div class="question question-8">
                 <label class="question-title" for="">8. Quand l'anosmie la perte de l'odorat et/ou du goût ont-elles été remarquées pour la
                     première fois par le patient?</label><br>
                 <input type="radio" name="moment-remarque" id="" value="Avant le diagnostic">Avant le diagnostic
@@ -118,7 +125,8 @@
                 <input type="radio" name="8b" id="" value="Oui">Oui
                 <input type="radio" name="8b" id="" value="Non">Non
             </div>
-            <div class="question">
+
+            <div class="question question-9">
                 <label class="question-title" for="">9. Le patient avait-il d'autres symptômes avant la perte de l'odorat et du  goūt? cochez toutes les cases</label><br>
                 <input type="checkbox" name="" id="" value="Aucun">Aucun<br>
                 <input type="checkbox" name="" id="" value="Fievre">Fievre<br>
@@ -140,7 +148,8 @@
                 <label for="">Si «Autre», veuillez fournir des détails:</label><br>
                 <input type="text" name="" id="">
             </div>
-            <div class="question">
+
+            <div class="question question-10">
             <label class="question-title" for="">10. Quels autre signe le patient avait-il PENDANT toute la période de la perte de l’odorat et
                 du gout?</label><br>
             <input type="checkbox" name="" id="" value="Aucun">Aucun<br>
@@ -163,26 +172,30 @@
             <label for="">Si «Autre», veuillez fournir des détails:</label><br>
             <input type="text" name="" id="">
             </div>
-            <div class="question">
+
+            <div class="question question-11">
                 <label class="question-title" for="">11. Quel était l'état de l'infection au COVID-19 au moment où la perte de l’odorat et du
                     gout a été observée?</label><br>
                 <input type="radio" name="etat-infection" id="" value="Patient hospitalisé / hospitalisé">Patient
                 hospitalisé / hospitalisé<br>
                 <input type="radio" name="etat-infection" id="" value="Ambulatoire">Ambulatoire
             </div>
-            <div class="question">
+
+            <div class="question question-12">
                 <label class="question-title" for="">12. L’état du patient s’est-il aggravé ou amélioré après la perte de l’odorat et du
                     gout?</label><br>
                 <input type="radio" name="etat-etat" id="" value="s'aggraver">s'aggraver<br>
                 <input type="radio" name="etat-etat" id="" value="Améliorer">Améliorer
             </div>
-            <div class="question">
+
+            <div class="question question-13">
                 <label class="question-title" for="">13. Quel est le statut actuel d’infection au COVID-19 du patient ?</label><br>
                 <input type="radio" name="etat-actuel" value="Actif">Actif<br>
                 <input type="radio" name="etat-actuel" value="récupéré">récupéré<br>
                 <input type="radio" name="etat-actuel" value="décédé">décédé
             </div>
-            <div class="question">
+
+            <div class="question question-14">
                 <label class="question-title" for="">14. La perte de l’odorat et du gout? s'est-elle résolue?</label><br>
                 <input type="radio" name="etat-perte-odorat-gout" id="Oui" value="Oui">Oui<br>
                 <input type="radio" name="etat-perte-odorat-gout" id="" value="Non">Non<br>
@@ -193,7 +206,8 @@
                 <input type="radio" name="resolution" id="" value="Résolution complète">Résolution complète<br>
                 <input type="radio" name="resolution" id="" value="Résolution partielle">Résolution partielle
             </div>
-            <div class="question">
+
+            <div class="question question-15">
                 <label class="question-title" for="">15. Le patient a-t-il reçu des traitements pour la perte de l’odorat et du gout?</label>
                 <br>
                 <input type="radio" name="traitement" value="Oui">Oui<br>
@@ -205,11 +219,12 @@
                 <label for="">Combien de temps après la perte de l’odorat et du gout?s'est-elle résolue</label>
                 <br><input type="text" name="" id="">
             </div>
-            <div class="question">
+
+            <div class="question question-16">
                 <label class="question-title" for="">16. Commentaires / Informations supplémentaires:</label><br>
                 <textarea name="commentaire" id="" cols="40" rows="5"></textarea>
             </div>
-            <input type="button" value="Remettre">
+            <input type="submit" value="Remettre">
         </form>
     </main>
     <script src="./js/main.js"></script>
