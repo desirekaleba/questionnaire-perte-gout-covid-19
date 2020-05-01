@@ -2,6 +2,7 @@ var questions = document.querySelectorAll(".question");
 
 function allQuestions() {
 
+    
     let data = {};
 
     var q1 = getQuestion("1");
@@ -20,6 +21,15 @@ function allQuestions() {
     var q14 = getQuestion("14");
     var q15 = getQuestion("15");
     var q16 = getQuestion("16");
+
+    let question_names = [];
+
+    for (let i = 1; i <= 16; i++){
+        let question_div = getQuestion(i);
+        let question_title = getQuestionTitle(question_div);
+        question_title = question_title.slice(question_title.indexOf('.') + 1);
+        question_names.push(question_title.trim());
+    }
 
     function getQuestion(number) {
         return document.querySelector(".question.question-" + number);
@@ -284,10 +294,26 @@ function allQuestions() {
 }
 
 const form = document.querySelector("form");
-form.addEventListener("submit", function (event) {
+form.addEventListener("submit", async function (event) {
 
     event.preventDefault();
     document.querySelector('#result-temp').innerHTML = JSON.stringify(allQuestions());
-    console.log(allQuestions());
+    
+    const formData = new FormData();
+    let data = allQuestions();
+    formData.append('data', JSON.stringify(data));
+    await fetch('./server.php', {
+        method: 'POST',
+        mode: 'cors',
+        cache: 'default',
+        credentials: 'same-origin',
+        headers: {
+        },
+        body: formData
+    }).then(response => {
+        return response.text();
+    }).then(data => {
+        console.log(data);
+    });
 
 });
