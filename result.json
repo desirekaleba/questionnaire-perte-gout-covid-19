@@ -1,0 +1,46 @@
+{
+    "q1": "kinesitherapi",
+    "q2": "34",
+    "q3": "femme",
+    "q4": "Rwanda",
+    "q5": "7",
+    "q6": [
+        "Travailleur de santé",
+        "Premier répondant",
+        "Contact étroit avec un cas confirmé",
+        "Sans abri"
+    ],
+    "q7": [
+        "Maladie cardiaque",
+        "Maladie neurologique",
+        "sida"
+    ],
+    "q8": [
+        "Avant le diagnostic",
+        "Oui"
+    ],
+    "q9": [
+        "Fievre",
+        "Toux seche ou grasse",
+        "Nez bouches",
+        "Diarrhee",
+        "Nausee",
+        "Douleurs abdominales"
+    ],
+    "q10": [
+        "Nez bouches",
+        "Maux de tetes"
+    ],
+    "q11": "Patient hospitalisé / hospitalisé",
+    "q12": "Améliorer",
+    "q13": "récupéré",
+    "q14": [
+        "un mois",
+        "Résolution complète"
+    ],
+    "q15": [
+        "glophone",
+        "3 semaines"
+    ],
+    "comments": "Merci"
+}
