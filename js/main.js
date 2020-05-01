@@ -294,13 +294,12 @@ function allQuestions() {
 }
 
 const form = document.querySelector("form");
-form.addEventListener("submit", async function (event) {
+form.addEventListener("submit", async function(event) {
 
     event.preventDefault();
     document.querySelector('#result-temp').innerHTML = JSON.stringify(allQuestions());
-    
-    const formData = new FormData();
     let data = allQuestions();
+    const formData = new FormData();
     formData.append('data', JSON.stringify(data));
     await fetch('./server.php', {
         method: 'POST',
@@ -312,8 +311,8 @@ form.addEventListener("submit", async function (event) {
         body: formData
     }).then(response => {
         return response.text();
-    }).then(data => {
-        console.log(data);
+    }).then(response_data => {
+        console.log(response_data);
     });
 
 });
