@@ -27,3 +27,25 @@ h1, h2 {
 .question-title {
     font-weight: bold;
 }
+
+input[name="submit"] {
+    border: none;
+    background-color: #ccc;
+    padding: 8px 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.sending {
+    background-color: rgb(163, 216, 39)!important;
+    color: white;
+}
+
+.done-sending {
+    background-color: rgb(94, 245, 120)!important;
+    color: white;
+}
+
+hr {
+    border: 1px solid black;
+}
