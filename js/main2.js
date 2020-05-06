@@ -294,10 +294,13 @@ function allQuestions() {
 }
 
 const form = document.querySelector("form");
+let btn = form.elements["submit"];
 form.addEventListener("submit", async function(event) {
 
     event.preventDefault();
     //document.querySelector('#result-temp').innerHTML = JSON.stringify(allQuestions());
+    btn.value = "En cours d'envoie...";
+    btn.className = "sending";
     let data = allQuestions();
     const formData = new FormData();
     formData.append('data', JSON.stringify(data));
@@ -310,9 +313,12 @@ form.addEventListener("submit", async function(event) {
         },
         body: formData
     }).then(response => {
+        btn.className = "done-sending";
+        btn.value = "Merci de votre contribution";
         return response.text();
     }).then(response_data => {
         console.log(response_data);
+        document.querySelector('main').innerHTML = 'Merci de votre contribution';
     });
 
 });
