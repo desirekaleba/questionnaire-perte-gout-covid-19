@@ -128,7 +128,7 @@ function allQuestions() {
         const index = result_q6.indexOf('Autre');
         result_q6[index] = q6_autre.value;
     }
-    data.q6 = result_q6;
+    data.q6 = result_q6.toString();
 
     // Question seven
     let result_q7 = [];
@@ -144,7 +144,7 @@ function allQuestions() {
         const index = result_q7.indexOf('Autre');
         result_q7[index] = q7_autre.value;
     }
-    data.q7 = result_q7;
+    data.q7 = result_q7.toString();
 
     // Question eight
     let q8_result = [];
@@ -173,7 +173,7 @@ function allQuestions() {
     }
 
     q8_result.push(q8_true_checked, q8_min_res);
-    data.q8 = q8_result;
+    data.q8 = q8_result.toString();
 
     // Question nine
     let result_q9 = [];
@@ -189,7 +189,7 @@ function allQuestions() {
         const index = result_q9.indexOf('Autre');
         result_q9[index] = q9_autre.value;
     }
-    data.q9 = result_q9;
+    data.q9 = result_q9.toString();
 
     // Question ten
     let result_q10 = [];
@@ -205,7 +205,7 @@ function allQuestions() {
         const index = result_q10.indexOf('Autre');
         result_q10[index] = q10_autre.value;
     }
-    data.q10 = result_q10;
+    data.q10 = result_q10.toString();
 
     // Question eleven
     const etat_infections = document.querySelectorAll('input[name="etat-infection"]');
@@ -261,7 +261,7 @@ function allQuestions() {
             }
         }
         q14_oui_res.push(q14_temps_apres.value, true_resolu);
-        data.q14 = q14_oui_res;
+        data.q14 = q14_oui_res.toString();
     } else {
         data.q14 = etat_perte_od_gout_checked;
     }
@@ -281,7 +281,7 @@ function allQuestions() {
     }
     if (traitement_checked == 'Oui') {
         q15_oui_res.push(q15_type_traitement.value, q15_temps_apres.value);
-        data.q15 = q15_oui_res;
+        data.q15 = q15_oui_res.toString();
     } else {
         data.q15 = traitement_checked;
     }
@@ -294,10 +294,13 @@ function allQuestions() {
 }
 
 const form = document.querySelector("form");
+let btn = form.elements["submit"];
 form.addEventListener("submit", async function(event) {
 
     event.preventDefault();
-    document.querySelector('#result-temp').innerHTML = JSON.stringify(allQuestions());
+    //document.querySelector('#result-temp').innerHTML = JSON.stringify(allQuestions());
+    btn.value = "En cours d'envoie...";
+    btn.className = "sending";
     let data = allQuestions();
     const formData = new FormData();
     formData.append('data', JSON.stringify(data));
@@ -310,9 +313,12 @@ form.addEventListener("submit", async function(event) {
         },
         body: formData
     }).then(response => {
+        btn.className = "done-sending";
+        btn.value = "Merci de votre contribution";
         return response.text();
     }).then(response_data => {
         console.log(response_data);
+        document.querySelector('main').innerHTML = 'Merci de votre contribution';
     });
 
 });

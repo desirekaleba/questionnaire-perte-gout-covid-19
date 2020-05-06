@@ -1,0 +1,91 @@
+/* Login */
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&display=swap");
+
+* {
+    line-height: 1.6;
+    word-spacing: 0.18rem;
+    box-sizing: border-box;
+    font-family: "Baloo Bhaina 2", cursive;
+    color: white;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: rgb(43, 39, 39);
+    padding: 1rem 2rem;
+}
+
+
+.form-group .form-controller {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 100;
+    color: aqua;
+}
+
+.form-controller {
+    padding: 0.4rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: rgb(41, 38, 38);
+}
+
+.form-controller:focus {
+    outline: none;
+    border-bottom: 1px solid rgb(144, 235, 174);
+}
+
+button {
+    background-color: rgb(41, 38, 38);
+    text-align: center;
+    color: white;
+    border: 2px solid white;
+    padding: 5px 12px;
+}
+
+.error {
+    filter: blur(1);
+    color: rgb(241, 35, 35);
+    text-align: center;
+    font-weight: 100;
+    animation: error 0.5s ease;
+}
+
+.error-solid {
+    border: 1px solid rgb(241, 35, 35);
+}
+
+.success {
+    color:  rgb(19, 226, 98);
+    text-align: center;
+    font-weight: 100;
+    animation: success 0.5s ease;
+}
+
+@keyframes error {
+    from {
+        opacity: 0.2;
+        transition: all;
+        
+    }
+
+    to {
+        opacity: 0.9;
+        transition: all;
+    }
+}
+
+@keyframes success {
+    from {
+        opacity: 0.2;
+        transition: all;
+    }
+
+    to {
+        opacity: 0.9;
+        transition: all;
+    }
+}
